@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hitung total harga</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Kode</th>
+            <th>Barang</th>
+            <th>Harga</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Barang A</td>
+            <td id="hargaBarangA">10.000</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Barang B</td>
+            <td id="hargaBarangB">20.000</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Barang C</td>
+            <td id="hargaBarangC">30.000</td>
+        </tr>
+    </table>
+    
+    <div>
+        <form action="" onsubmit="total()">
+            <h1>Inputan User</h1>
+            <label for="kodeInput">Masukkan kode :</label>
+            <input type="text" id="kodeInput"><br>
+            <label for="jumlahBarang">Banyaknya barang :</label>
+            <input type="text" id="jumlahBarang"><br>
+            <input type="submit">
+        </form>
+    </div>
+
+    <script>
+        
+        function total() {
+            let kode
+            let kodeHarga
+            let jumlahTotal
+            let totalHarga
+
+            kode = document.getElementById('kodeInput').value
+            if (kode === "001"){
+                kodeHarga = 10000
+                jumlahTotal = document.getElementById("jumlahBarang").value
+                totalHarga = kodeHarga * jumlahTotal
+            } else if (kode === "002") {
+                kodeHarga = 20000
+                jumlahTotal = document.getElementById("jumlahBarang").value
+                totalHarga = kodeHarga * jumlahTotal
+            } else if (kode === "003") {
+                kodeHarga = 30000
+                jumlahTotal = document.getElementById("jumlahBarang").value
+                totalHarga = kodeHarga * jumlahTotal
+            }
+            window.alert("total pembayaran adalah :"+ totalHarga)
+            window.prompt("masukkan uang user :")
+        }
+
+    </script>
+</body>
+
+</html>
